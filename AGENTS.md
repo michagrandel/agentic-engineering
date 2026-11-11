@@ -8,7 +8,8 @@ This is a **prompt/agent-definition repository, not a code project**. It contain
 
 - `.agents/developer.agent.md`, `.agents/qa.agent.md`, `.agents/reviewer.agent.md`, `.agents/release.agent.md` — the four role definitions
 - `.agents/skills/agent-session-protocol/SKILL.md` — the shared coordination protocol loaded by all four roles
-- `Readme.md` — one-line project description
+- `Readme.md` — project overview, layout, setup, and conventions for human readers
+- `docs/agentic-workflow.md` — human-readable end-to-end description of the exact four-agent workflow (derived from the skill and role files, which remain binding)
 
 **There is no build, test, or lint setup** — no package manifests, no CI, no test suites. Validation of a change means: the Markdown is consistent, cross-references resolve, and the YAML frontmatter and embedded YAML schemas stay well-formed and mutually consistent across files.
 
