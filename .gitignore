@@ -1,0 +1,5 @@
+# Claude Code skill junctions — local only, recreate after clone (see AGENTS.md)
+.claude/skills/
+
+# Harness mirrors created by .agents/skills/project-setup - local only, never commit
+.github/agents/
