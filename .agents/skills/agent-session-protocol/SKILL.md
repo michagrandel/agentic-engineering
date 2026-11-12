@@ -4,8 +4,9 @@ description: >
   Shared session, registry, and coordination protocol for all agent roles (Dev, QA,
   Reviewer, Release) in the four-agent framework. Loaded by all agents. Contains:
   registry format, state file, two-tier file claims, handover artifact rules, QA
-  workspace mode, and the Perforce client limit. References the rule core
-  ("Agent Rules: Common Core"; rule numbers refer to it).
+  workspace mode, and the Perforce client limit. Rule citations
+  ("Agent Rules: Common Core"; rules 1-43) refer to the agent-rules-core skill,
+  which is binding for all four roles.
 version: 1.0
 applies-to: [dev, qa, reviewer, release]
 ---
@@ -14,7 +15,7 @@ applies-to: [dev, qa, reviewer, release]
 
 ## Principles
 
-- The rule core is binding for **all four roles**: Dev follows it, QA and Reviewer audit against it, Release presumes its fulfillment.
+- The rule core (the `agent-rules-core` skill, "Agent Rules: Common Core", rules 1–43) is binding for **all four roles**: Dev follows it, QA and Reviewer audit against it, Release presumes its fulfillment.
 - **Parallel instances:** Multiple Dev/QA instances may run in parallel — but only under the task isolation protocol (Rule 40c): **one task = one dedicated workspace** (Git worktree or Perforce client). Two Dev instances **never** share a workspace. Coordination runs exclusively through the shared registry.
 - **Git worktrees are unlimited by design** — workspace limits apply exclusively to Perforce.
 

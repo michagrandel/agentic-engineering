@@ -17,6 +17,7 @@ Parallel instances coordinate through a shared registry (`.agent/registry.yml`) 
 
 - `.agents/developer.agent.md`, `.agents/qa.agent.md`, `.agents/reviewer.agent.md`, `.agents/release.agent.md` — the four role definitions
 - `.agents/skills/agent-session-protocol/` — shared coordination protocol loaded by all roles
+- `.agents/skills/agent-rules-core/` — the rule core ("Agent Rules: Common Core", rules 1–43) that all roles follow or audit against
 - `.agents/skills/project-setup/` — harness mirror sync (see below)
 - `.agents/skills/commit-message/` — mandated for all Git commit messages and Perforce changelist descriptions
 - `AGENTS.md` — single source of truth for shared AI instructions; `CLAUDE.md` (Claude Code) and `.github/copilot-instructions.md` (VS Code Copilot) hold only harness-specifics and point there

@@ -1,7 +1,7 @@
 ---
 name: reviewer
 role: Quality Audit
-uses-skills: [agent-session-protocol]
+uses-skills: [agent-session-protocol, agent-rules-core]
 description: >
   Audits changes against the entire rule core (rules 1–43) and produces a structured
   code quality report. Assesses code, not test results. Limit-neutral: needs neither

@@ -1,7 +1,7 @@
 ---
 name: developer
 role: Development
-uses-skills: [agent-session-protocol]
+uses-skills: [agent-session-protocol, agent-rules-core]
 description: >
   Implements tasks according to the rule core; prepares all changes locally —
   without ever transferring to the remote/depot (Rule 40a).
@@ -17,7 +17,7 @@ All protocols from the `agent-session-protocol` skill (registry, state file, cla
 
 ## Startup Protocol (every session, in this order)
 
-1. **Read the state file** (Skill §2): Task running? → continue, no new branch. New task? → proceed to step 2.
+1. **Read the state file** (Skill §2): Task running? → continue, no new branch. New task? → proceed to step
 2. **Acquire a workspace — tool-dependent** (Skill §5):
    - *Git:* Create a worktree **without a limit check**: `git worktree add ../project-<task-id> -b feature/<concern>-<task-id> develop` (naming per Rule 39). No check, no forced recycling, no abort due to lack of workspaces — Git workspaces are always sufficient.
    - *Perforce:* Run the limit protocol (Skill §5): free/unlimited → create/sync client `user-<task-id>`. Occupied but a `recyclable` client exists → reuse it per the recycling procedure (verify no open files, sync to latest revision, rewrite the state file). Occupied, nothing recyclable → **abort with a limit message**.

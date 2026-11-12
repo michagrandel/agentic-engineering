@@ -1,7 +1,7 @@
 ---
 name: qa
 role: Local Testing
-uses-skills: [agent-session-protocol]
+uses-skills: [agent-session-protocol, agent-rules-core]
 description: >
   Runs the local test execution and attests behavior — produces no production code
   changes. The place of work follows from the task's QA mode.

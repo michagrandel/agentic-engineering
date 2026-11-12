@@ -1,7 +1,7 @@
 ---
 name: release
 role: Push & Submit
-uses-skills: [agent-session-protocol]
+uses-skills: [agent-session-protocol, agent-rules-core]
 description: >
   The only role with transfer authority (Rule 40a). Sequencer: releases strictly
   sequentially, one task at a time. Decides Git claim overlaps mechanically from
